@@ -1,0 +1,37 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-fxai-fanout
+  #name: simple-fanout-example
+  annotations:
+          kubernetes.io/ingress.class: nginx
+          #nginx.ingress.kubernetes.io/rewrite-target: /$2
+          nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: fxai-fl-app.impro.pe.kr
+    http:
+      paths:
+              #- path: /fxai(/|$)(.*)
+              #- path: (/|$)(.*)
+      - path: / 
+        pathType: Prefix
+        backend:
+          service:
+            name: fxai-fl-app
+            port:
+                    number: 3000
+#     - path: /welcome
+#        pathType: Prefix
+#        backend:
+#          service:
+#            name: http-go
+#            port:
+#              number: 80
+  tls:
+  - hosts:
+    - fxai-fl-app.impro.pe.kr
+    secretName: fxai-fl-app-tls
+
+#http://waspro.tistory.com/579
+#http://box0830.tistory.com/311

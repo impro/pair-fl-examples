@@ -1,0 +1,2 @@
+cp /home/vagrant/DEV_AIDP/ONPREM/K8S_INIT/STORAGE/mount/backup_20220526/pv-vol3/kale-examples/DEVOPS-SKAFFOLD/PAIR/W_INGRESS/fxai-fl/federated-learning/demo/audio/server/skaffold.yaml .
+
