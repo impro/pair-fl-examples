@@ -1,2 +1,10 @@
 cp /home/vagrant/DEV_AIDP/ONPREM/K8S_INIT/STORAGE/mount/backup_20220526/pv-vol3/kale-examples/DEVOPS-SKAFFOLD/PAIR/W_INGRESS/fxai-fl/federated-learning/demo/audio/server/skaffold.yaml .
 
+cp -rf k8s-* federated-learning/demo/audio/server 
+cp -rf skaffold.yaml federated-learning/demo/audio/server
+
+cd federated-learning/demo/audio/server
+skaffold run
+
+# k8s-ingress-all.yaml
+# k8s-deployment.yaml  k8s-ingress-minio.yaml  skaffold.yaml
