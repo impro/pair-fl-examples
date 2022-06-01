@@ -1,0 +1,13 @@
+wget https://dl.minio.io/client/mc/release/linux-amd64/mc
+chmod +x mc
+cp mc /usr/local/bin
+
+mc config host add fxai-minio http://127.0.0.1:9000 minio minio123
+wget https://storage.googleapis.com/tfjs-speech-command-model-14w/model.json
+mc mb fxai-minio/models
+mc cp -r model.json fxai-minio/models
+
+
+#gsutil cp -r gs://kfserving-examples/models/tensorflow/mnist .
+#mc mb fxai-minio/models/mnist
+#mc mb fxai-minio/models/digit-0
