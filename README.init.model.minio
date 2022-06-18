@@ -7,6 +7,23 @@ wget https://storage.googleapis.com/tfjs-speech-command-model-14w/model.json
 mc mb fxai-minio/models
 mc cp -r model.json fxai-minio/models
 
+mc policy set public fxai-minio/models
+
+wget https://storage.googleapis.com/tfjs-speech-command-model-14w/group1-shard1of1
+wget https://storage.googleapis.com/tfjs-speech-command-model-14w/group2-shard1of1
+wget https://storage.googleapis.com/tfjs-speech-command-model-14w/group3-shard1of1
+wget https://storage.googleapis.com/tfjs-speech-command-model-14w/group4-shard1of1
+wget https://storage.googleapis.com/tfjs-speech-command-model-14w/group5-shard1of2
+wget https://storage.googleapis.com/tfjs-speech-command-model-14w/group5-shard2of2
+wget https://storage.googleapis.com/tfjs-speech-command-model-14w/group6-shard1of1
+
+mc cp -r group1-shard1of1 fxai-minio/models
+mc cp -r group2-shard1of1 fxai-minio/models
+mc cp -r group3-shard1of1 fxai-minio/models
+mc cp -r group4-shard1of1 fxai-minio/models
+mc cp -r group5-shard1of2 fxai-minio/models
+mc cp -r group5-shard2of2 fxai-minio/models
+mc cp -r group6-shard1of1 fxai-minio/models
 
 #gsutil cp -r gs://kfserving-examples/models/tensorflow/mnist .
 #mc mb fxai-minio/models/mnist
