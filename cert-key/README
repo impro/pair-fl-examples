@@ -1,4 +1,5 @@
 https://waspro.tistory.com/579
+kubectl create secret tls fxai-fl-app-tls \ --namespace default \ --key tls.key \ --cert tls.crt
 
-kubectl create secret tls fxai-tls --cert fxai.impro.pe.kr/kubecfg.crt --key fxai.impro.pe.kr/kubecfg.key
-kubectl create secret tls fxai-tls --cert kubecfg.crt --key kubecfg.key
+#kubectl create secret tls fxai-tls --cert fxai.impro.pe.kr/kubecfg.crt --key fxai.impro.pe.kr/kubecfg.key
+#kubectl create secret tls fxai-tls --cert kubecfg.crt --key kubecfg.key
