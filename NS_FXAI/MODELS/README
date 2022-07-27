@@ -18,3 +18,8 @@ mc policy set public fxai-minio/models
 
 http://localhost:9000/models/model.json
 https://minio.impro.pe.kr/models/model.json
+
+#CLIENT MODEL PATH SETUP		
+		cd ~/WORKSPACE/pair-fl-examples/NS_FXAI
+		cp model.js ~/WORKSPACE/pair-fl-examples/NS_FXAI/federated-learning/demo/audio/client/model.js
+
