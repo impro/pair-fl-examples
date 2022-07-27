@@ -15,3 +15,6 @@ wget https://storage.googleapis.com/tfjs-speech-command-model-14w/group6-shard1o
 mc cp -r group1-shard1of1 fxai-minio/models;mc cp -r group2-shard1of1 fxai-minio/models;mc cp -r group3-shard1of1 fxai-minio/models;mc cp -r group4-shard1of1 fxai-minio/models;mc cp -r group5-shard1of2 fxai-minio/models;mc cp -r group5-shard2of2 fxai-minio/models;mc cp -r group6-shard1of1 fxai-minio/models
 
 mc policy set public fxai-minio/models
+
+http://localhost:9000/models/model.json
+https://minio.impro.pe.kr/models/model.json
